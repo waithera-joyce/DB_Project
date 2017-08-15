@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class equipment_owner extends Model
 {
-    
-    protected $fillable =['Owner_id','Serial_no','Employee_Id','ISSUE_date','Submit_date'];
+     protected $fillable =['owner_id','equipment_id','employee_Id','issue_date','submit_date'];
 
     public function department() {
      	return $this->hasOne(department::class, 'Dpt_id');
@@ -17,4 +16,3 @@ class equipment_owner extends Model
      	return $this->hasOne(employee::class,'Account_no');
      }
 }
-

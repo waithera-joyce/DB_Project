@@ -13,11 +13,14 @@ class CreateCarOwnerTable extends Migration
     public function up()
     {
         Schema::create('car_owner', function (Blueprint $table) {
-             $table->increments('Owner_Id');
-             $table->string('No_plate');
-             $table->integer('Employee_Id');
-             $table->date('Issue_date');
-             $table->date('Submit_date');
+             $table->increments('owner_Id');
+             $table->integer('car_id')->unsigned();
+             $table->integer('employee_id')->unsigned();
+             $table->date('issue_date');
+             $table->date('submit_date');
+            // $table->timestamp();
+             $table->foreign('employee_id')->references('id')->on('employee'); 
+             $table->foreign('car_id')->references('id')->on('car');
          });
     }
 

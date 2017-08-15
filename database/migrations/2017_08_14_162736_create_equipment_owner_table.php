@@ -13,11 +13,14 @@ class CreateEquipmentOwnerTable extends Migration
     public function up()
     {
         Schema::create('equipment_owner', function (Blueprint $table) {
-             $table->increments('Owner_Id');
-             $table->integer('Serial_no');
-             $table->integer('Employee_Id');
-             $table->date('Issue_date');
-             $table->date('Submit_date');
+             $table->increments('owner_Id');
+             $table->integer('equipment_id')->unsigned();
+             $table->integer('employee_Id')->unsigned();
+             $table->date('issue_date');
+             $table->date('submit_date');
+             //$table->timestamp();
+             $table->foreign('equipment_id')->references('id')->on('equipment'); 
+             $table->foreign('employee_Id')->references('id')->on('employee'); 
         });
      }
 

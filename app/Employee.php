@@ -6,20 +6,21 @@ use Illuminate\Database\Eloquent\Model;
 
 class employee extends Model
 {
-    protected $fillable =['Employee_Id','Name','Account_no','Dpt_Id','Serial_no','No_plate','Start_date','Stop_date','Phone_no','Addres','Gender','Age'];
+    
+    protected $fillable =['id','Name','Start_date','Stop_date','Phone_no','Address','Age'];
 
 
     public function department()
     {
-    	return $this->belongsTo(department::class, 'Dpt_Id');
+    	return $this->belongsTo(department::class, 'dpt_Id');
     }
     public function equipment_owner()
     {
-    	return $this->hasMany(equipment_owner::class,'Serial_no');
+    	return $this->hasMany(equipment_owner::class,'serial_no');
     }
     public function car_owner()
     {
-    	return $this->hasMany(car_owner::class,'No_plate');
+    	return $this->hasMany(car_owner::class,'no_plate');
     }
     public function bank()
     {

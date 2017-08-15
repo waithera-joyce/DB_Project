@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CarOwnwerTableSeeder extends Seeder
+class CarOwnerTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -10,47 +10,66 @@ class CarOwnwerTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
+   {
           \DB::table('car_owner')->delete();
         
         \DB::table('car_owner')->insert(array (
             0 => array(
+            'owner_id'=>1,
+            'car_id'=>1,	
             'Employee_Id'=>1,
-            'No_plate'=>'KBT OO1A',
             'Issue_date'=>'1/12/2010',
             'Submit_date'=>'1/12/2011'
             ),
             1 => array(
+            'owner_id'=>2,
+            'car_id'=>2,
             'Employee_Id'=>2,
-            'No_plate'=>'KBT 002A',
             'Issue_date'=>'1/12/2010',
             'Submit_date'=>'1/12/2011'
             ),
             2 => array(
+            'owner_id'=>3,
+            'car_id'=>3,
             'Employee_Id'=>3,
-            'No_plate'=>'KBT 003A',
             'Issue_date'=>'1/12/2010',
             'Submit_date'=>'1/12/2011'
             ),
             3 => array(
+            'owner_id'=>4,
+            'car_id'=>4,
             'Employee_Id'=>4,
-            'No_plate'=>'KBT 004A',
             'Issue_date'=>'1/2/2011',
             'Submit_date'=>'1/2/2012'
             ),
             4 => array(
+            'owner_id'=>5,
+            'car_id'=>5,
             'Employee_Id'=>5,
-            'No_plate'=>'KBT 005A',
             'Issue_date'=>'1/3/2010',
             'Submit_date'=>'1/3/2011'
             ),
             5 => array(
+            'owner_id'=>6,
+            'car_id'=>6,
             'Employee_Id'=>6,
-            'No_plate'=>'KBT 006A',
             'Issue_date'=>'1/3/2010',
             'Submit_date'=>'1/3/2011'
             ),
-            
+            6 => array(
+            'owner_id'=>7,
+            'car_id'=>7,
+            'Employee_Id'=>7,
+            'Issue_date'=>'1/3/2010',
+            'Submit_date'=>'1/3/2011'
+            ),
+            7 => array(
+            'owner_id'=>8,
+            'car_id'=>8,
+            'Employee_Id'=>8,
+            'Issue_date'=>'1/3/2010',
+            'Submit_date'=>'1/3/2011'
+            ),      
              ));
     }
 }

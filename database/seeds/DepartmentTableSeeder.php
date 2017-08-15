@@ -16,26 +16,29 @@ class DepartmentTableSeeder extends Seeder
         
         \DB::table('Department')->insert(array (
          0 => array(
-            'Dpt_Id'=>1,
+            'id'=>1,
             'Name'=>'Information Technology',
-            'Serial_no'=>900009,
+            'equipment_id'=>1,
+            'role_id'=>1
             ), 
          1 => array(
-            'Dpt_Id'=>2,
+            'id'=>2,
             'Name'=>'Finance',
-            'Serial_no'=>900009,
+            'equipment_id'=>2,
+            'role_id'=>2
             ), 
          2 => array(
-            'Dpt_Id'=>3,
+            'id'=>3,
             'Name'=>'Marketting',
-            'Serial_no'=>110003,
+            'equipment_id'=>3,
+            'role_id'=>3
             ), 
          3 => array(
-            'Dpt_Id'=>4,
+            'id'=>4,
             'Name'=>'Communications',
-            'Serial_no'=>220001,
+            'equipment_id'=>4,
+            'role_id'=>4
             ), 
-
        ));
                 }
 }

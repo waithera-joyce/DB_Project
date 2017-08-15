@@ -13,10 +13,13 @@ class CreateSalaryTable extends Migration
     public function up()
     {
         Schema::create('salary', function (Blueprint $table) {
-             $table->string('Account_no');
-             $table->integer('Employee_Id');
-             $table->integer('Amount');
+             $table->increments('id');
+             $table->string('account_no',12);
+             $table->integer('employee_Id')->unsigned();
+             $table->integer('amount');
              $table->date('date');
+             //$table->timestamp();
+             $table->foreign('employee_Id')->references('id')->on('employee'); 
          });
     }
 
